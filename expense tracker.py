@@ -6,7 +6,7 @@ import calendar
 import datetime
 from datetime import datetime
 from datetime import datetime
-#i import twice cause why not xdd
+# i import twice cause why not xdd
 from datetime import datetime
 
 now = datetime.now()
@@ -15,9 +15,9 @@ now = datetime.now()
 def main():
     print(f"running expense tracker")
     expense_files_path = "expenses.csv"
-    
-    budget = 2000 #budget to spend monthly 
 
+    budget = 2000 #budget to spend monthly 
+    # add a input for your budget once untill the month ends then ask for the budget again when your run it
     expense = get_user_expense()
     # print(expense)
 
@@ -110,8 +110,6 @@ def summarize_user_expense(expense_file_path, budget):
 
 def yellow(text):
     return "\033[33m" + text + "\033[0m"
-
-
 
 
 if __name__ == "__main__":
