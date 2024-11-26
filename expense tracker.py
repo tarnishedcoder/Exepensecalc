@@ -16,7 +16,7 @@ def main():
     print(f"running expense tracker")
     expense_files_path = "expenses.csv"
 
-    budget = 2000 #budget to spend monthly 
+    budget = budget_input() #budget to spend monthly 
     # add a input for your budget once untill the month ends then ask for the budget again when your run it
     expense = get_user_expense()
     # print(expense)
@@ -25,9 +25,16 @@ def main():
 
     summarize_user_expense(expense_files_path, budget)
 
-    # get user input for expense:
-
-
+    # get user input for budget hopefully its enough for da month
+def budget_input():
+    while True:
+        try:
+            print(f"what is your budget?")
+            budget_amount = float(input("enter budget: "))
+            return budget_amount
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
+            
 def get_user_expense():
     print(f"gettin user expense")
     expense_name = input("enter expense name:")
